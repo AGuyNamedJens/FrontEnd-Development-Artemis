@@ -11,6 +11,9 @@ app.set('view engine', 'ejs')
   
 app.get('/', function(req, res){ 
     res.render('index') 
+})
+app.get('/test', function(req, res){ 
+    res.render('test') 
 }) 
   
 app.listen(8080, function(error){ 
