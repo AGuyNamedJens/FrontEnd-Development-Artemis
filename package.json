@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "/site/wwwroot/app.js"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
