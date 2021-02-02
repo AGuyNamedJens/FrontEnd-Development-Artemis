@@ -1,3 +1,5 @@
+// Nodig voor de "Node.js engine" maar wordt niet gebruikt
+
 const express = require('express') 
 const path = require('path') 
 const app = express() 
