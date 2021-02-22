@@ -47,7 +47,7 @@ function fadeOutSlideShow() {
   var opacity = Number(document.getElementById("slideShowImg").style.opacity);
 
   if (opacity > 0.2) {
-    opacity -= 0.2;
+    opacity -= 0.1;
     body.style.opacity = opacity;
   } else {
     IntervalSlideShowIn = setInterval(fadeInSlideShow, 200);
@@ -61,7 +61,7 @@ function fadeInSlideShow() {
   var opacity = Number(document.getElementById("slideShowImg").style.opacity);
 
   if (opacity < 1) {
-    opacity += 0.2;
+    opacity += 0.1;
     body.style.opacity = opacity;
   } else {
     clearInterval(IntervalSlideShowIn);
