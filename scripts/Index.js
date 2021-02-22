@@ -14,22 +14,26 @@ function slideshow() {
     }, 5000)
 }
 
+var opacity=0; 
+var intervalID=0; 
+
 function slideInDonate() {
 setInterval(fadeIn, 200); 
 
 function fadeIn(){ 
-   var body = document.getElementByClassName("doneer"); 
-   opacity = Number(window.getComputedStyle(body).getPropertyValue("opacity")) 
+   var body = document.getElementsByClassName("doneer"); 
+   opacity = Number(document.getElementsByClassName("doneer")[0].style.opacity);
 
-     if(opacity < 1){ 
-            opacity=opacity+0.1; 
-                    body.style.opacity = opacity 
-     } 
-     else{ 
-         clearInterval(intervalID);  
-     } 
- }
+        if(opacity < 1){ 
+            opacity += 0.1; 
+            body[0].style.opacity = opacity 
+        } 
+        else{ 
+            clearInterval(intervalID);  
+        } 
+    }  
 }
 
-window.onload = slideshow;
+document.getElementsByClassName("doneer")[0].style.opacity = 0;
 window.onload = setTimeout(slideInDonate, 1500);
+window.onload = slideshow;
