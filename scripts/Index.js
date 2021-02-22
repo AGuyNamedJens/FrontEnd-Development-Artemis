@@ -65,10 +65,13 @@ function fadeInSlideShow() {
     body.style.opacity = opacity;
   } else {
     clearInterval(IntervalSlideShowIn);
+    setTimeout(() => {
+        IntervalSlideShowOut = setInterval(fadeOutSlideShow, 200);
+    }, 5000)
   }
 }
 
 document.getElementsByClassName("doneer")[0].style.opacity = 0;
 window.onload = setTimeout(slideInDonate, 1500);
 //window.onload = slideshow;
-window.onload = setInterval(SlideShow, 6000);
+window.onload = setTimeout(SlideShow, 5000);
