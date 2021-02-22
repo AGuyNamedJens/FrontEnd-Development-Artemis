@@ -13,28 +13,29 @@
 
 	/* width: max-content; */
 }
-#Pussy{
 
-}
 
 #formContact{
-	background-color: #ffffff;
-	opacity: 100%;
 	display: flex;
 	flex-direction: column;
   	justify-content: center;
   	flex-wrap: wrap;
 	width: max-content;
 	height: max-content;
-	padding: 10px 50px;
 }
 
 
 #formContact input{
-	height: 20px; 
+	height: 30px; 
 	margin: 5px;
+	border-radius: 15px;
 }
 
-#Question{
+#formContact input #Question{
 	height: 40px;
+}
+
+#sentContact{
+	background-color: geel;
+	
 }

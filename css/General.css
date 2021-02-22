@@ -10,7 +10,14 @@
     --lichtbruin: #f1e6d1;
     --lichgrijs: #707070;
     --paars: #5457a6;
-    --geel: #eebb55
+    --geel: #eebb55;
+
+    --logo_width: 150px;
+}
+
+html{
+    height: 100%;
+    width: 100%;
 }
 
 html, body{
@@ -21,18 +28,25 @@ html, body{
 
 nav{
     box-shadow: 5px 5px 5px rgb(180, 180, 180);
-    width: 100vw;
-    height: 10vh;
+    width: 100%;
+    min-height: 10vh;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 0 20px;
 }
 
 ul{
+    width: auto;
+    height: 100%;
+    list-style-type: none;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    list-style-type: none;
     align-items: center;
 }
 
@@ -50,33 +64,28 @@ nav ul a{
     font-size: 1.5em;
 }
 
-nav .logo,
-nav .doneer {
-    /* 
-        Als er geen height is van 100% stretched de img te ver uit en vernaggelt hij alles.
-        De width is zodat de nav op zijn plek blijft. Al maak je m kleiner het boeit niet zolang de twee
-        knoppen aan de zijkanten maar gelijke breedte hebben. Ik heb gewoon voor 20% gekozen.
-    */
-    height: 100%;
-    width: 20%;
+nav .logo{
+    display: flex;
+    min-width: var(--logo_width);
 }
 
 nav .logo img{
     width: auto;
-    height: 100%;
+    height: var(--logo_width);
 }
 
 nav .doneer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
-}
-
-nav .doneer a{
     padding: 1rem 5rem;
     border-radius: 30px;
     background-color: var(--geel);
     font-size: 1.5em;
+    min-width: 245px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .doneer a{
     color: #FFF;
 }
