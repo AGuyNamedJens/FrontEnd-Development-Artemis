@@ -15,36 +15,45 @@ function slideshow() {
   else index = 0;
 }
 
+// Donate SlideIn
 function donateButton() {
   document.getElementsByClassName("doneer")[0].className = "doneer fadeIn";
 }
 
+// Vars voor clearInterval
 var IntervalSlideShowOut;
 var IntervalSlideShowIn;
 
 function SlideShow() {
-  var body = document.getElementById("slideShowImg");
-
+  // De start van de loop
   SlideOut();
 
   function SlideIn() {
+    // Clear interval van SlideIn
     clearInterval(IntervalSlideShowIn);
     setTimeout(() => {
+      // Set interval (timeout wil niet werken)
       IntervalSlideShowOut = setInterval(SlideOut, 200);
     }, 4500);
   }
+
   function SlideOut() {
-    body.className = "fadeOut";
+    // Fade out CSS
+    document.getElementById("slideShowImg").className = "fadeOut";
+    // Clear interval van SlideIn
     clearInterval(IntervalSlideShowOut);
     setTimeout(() => {
+      // Set interval (timeout wil niet werken)
       IntervalSlideShowIn = setInterval(SlideIn, 200);
-      slideshow()
+      // Verander image
+      slideshow();
     }, 4500);
-
   }
 }
 
+// Opacity op 0 vanwege animatie
 document.getElementsByClassName("doneer")[0].style.opacity = 0;
+
+// Timeouts voor fade effecten
 window.onload = setTimeout(donateButton, 1500);
-//window.onload = slideshow;
 window.onload = setTimeout(SlideShow, 5000);
