@@ -14,27 +14,14 @@
 }
 
 
-#formDoneer{
+form
+{
 	display: flex;
+
 	flex-direction: column;
-  	justify-content: center;
-  	flex-wrap: wrap;
-	width: max-content;
-	height: max-content;
+	align-items: center;
 }
 
-
-#formDoneer input{
-	height: 30px; 
-	margin: 5px;
-	border-radius: 15px;
-}
-
-#formDoneert input #Question{
-	height: 40px;
-}
-
-#sentDoneer{
-	background-color: geel;
-	
+input[type="submit"]{
+	width: 70%;
 }

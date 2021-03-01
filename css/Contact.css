@@ -16,26 +16,27 @@
 
 
 #formContact{
-	display: flex;
-	flex-direction: column;
-  	justify-content: center;
-  	flex-wrap: wrap;
-	width: max-content;
-	height: max-content;
-}
-
-
-#formContact input{
-	height: 30px; 
-	margin: 5px;
-	border-radius: 15px;
-}
-
-#formContact input #Question{
-	height: 40px;
-}
-
-#sentContact{
-	background-color: geel;
 	
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1rem 5rem;
+}
+
+#formContact h3{
+	margin-left: 1rem;
+}
+
+#formContact #Question{
+	min-height: 16rem;
+	grid-column: 2;
+}
+
+#wrapper3{
+	display: flex;
+	justify-content: center;
+	
+	grid-row: 2;
+	grid-column: span 2;
+	margin-top: 1em;
 }

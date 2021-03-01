@@ -4,9 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="../css/General.css">
+        
         <!-- <link rel="stylesheet" href="css/index.css"> -->
+        <link rel="stylesheet" href="../css/General.css">
+        <link rel="stylesheet" href="../css/Forms.css">
         <link rel="stylesheet" href="../css/Contact.css">
+        
         <link rel = "icon" href = "../img/Artemis_icon_Tabheader.png" type = "image/x-icon"> 
     </head> 
     <body>
@@ -36,28 +39,38 @@
         </nav>
         <!-- <img id="Pussy" src="../Img/Pussy.jpg" alt="Pussy"></img> -->
         <main id="mainContact">
-            <form id="formContact">
-                <h3>
-                    Aanhef
-                </h3>
-                <input type="text"></input>
-                <h3>
-                    Naam
-                </h3>
-                <input type="text"></input>
-                <h3>
-                    E-mail
-                </h3>
-                <input type="email"></input>
-                <h3>
-                    TelefoonNummer
-                </h3>
-                <input type="tel"></input>
-                <h3>
-                    Vraag/Opmerking
-                </h3>
-                <input id="Question" type="text"></input>
-				<div id="sentContact">verzend</div>
+            <form id="formContact">                
+                <div id="wrapper1">
+                    <h3>
+                        Aanhef
+                    </h3>
+                    <input type="text"></input>
+                    <h3>
+                        Naam
+                    </h3>
+                    <input type="text"></input>
+                    <h3>
+                        E-mail
+                    </h3>
+                    <input type="email"></input>
+                    <h3>
+                        TelefoonNummer
+                    </h3>
+                    <input type="tel"></input>
+                </div>
+                
+                <div id="wrapper2">
+                    <h3>
+                        Vraag/Opmerking
+                    </h3>
+                    <textarea id="Question" type="text"></textarea>
+                </div>
+            <!-- End of form wrapper -->
+            
+                <div id="wrapper3">
+                    <input id="send" type="submit" readonly="readonly" value="Verstuur"></input>
+                </div>
+				
             </form>
         </main>
     </body>
