@@ -9,11 +9,13 @@ function slideshow() {
     "img/index/Slideshow/Pussy.jpg"
   );
   document.getElementById("slideShowImg").src = `${dataArray[`${index}`]}`;
+  document.getElementById("slideShowImg").className = "fadeIn";
+
   if (index < 4) index++;
   else index = 0;
 }
 
-var IntervalDonate;
+/*var IntervalDonate;
 
 function slideInDonate() {
   // aparte functie want een interval in een timeout wil niet werken
@@ -69,9 +71,38 @@ function fadeInSlideShow() {
         IntervalSlideShowOut = setInterval(fadeOutSlideShow, 200);
     }, 5000)
   }
+}*/
+
+function donateButton() {
+  document.getElementsByClassName("doneer")[0].className = "doneer fadeIn";
+}
+
+var IntervalSlideShowOut;
+var IntervalSlideShowIn;
+
+function SlideShow() {
+  var body = document.getElementById("slideShowImg");
+
+  SlideOut();
+
+  function SlideIn() {
+    clearInterval(IntervalSlideShowIn);
+    setTimeout(() => {
+      IntervalSlideShowOut = setInterval(SlideOut, 200);
+    }, 4500);
+  }
+  function SlideOut() {
+    body.className = "fadeOut";
+    clearInterval(IntervalSlideShowOut);
+    setTimeout(() => {
+      IntervalSlideShowIn = setInterval(SlideIn, 200);
+      slideshow()
+    }, 4500);
+
+  }
 }
 
 document.getElementsByClassName("doneer")[0].style.opacity = 0;
-window.onload = setTimeout(slideInDonate, 1500);
+window.onload = setTimeout(donateButton, 1500);
 //window.onload = slideshow;
 window.onload = setTimeout(SlideShow, 5000);
