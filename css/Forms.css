@@ -3,6 +3,7 @@ form h3{
 	color: var(--paars);
 	font-weight: normal;
 }
+
 form input,
 form textarea{
 	height: 30px; 
