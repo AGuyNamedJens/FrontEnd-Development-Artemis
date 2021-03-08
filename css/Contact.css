@@ -6,20 +6,31 @@
 	background-position: center;
 
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
   	justify-content: center;
 	flex-wrap: wrap;
 	align-items: center;
 
-	/* width: max-content; */
+	width: 100%;
 }
 
+#mainContact::before{
+
+	content: '';
+	
+	position: absolute;
+	left: 25%;
+	min-height: 400px;
+	width: 5px;
+	background-color: red;
+	border-radius: 100px
+}
 
 #formContact{
-	
+	width: 500px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: auto auto;
 	gap: 1rem 5rem;
 }
 
@@ -30,9 +41,25 @@
 
 #wrapper3{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
 	
 	grid-row: 2;
 	grid-column: span 2;
-	margin-top: 1em;
+}
+
+#checkboxWrapper
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	flex-wrap: nowrap;
+}
+
+#checkboxWrapper input[type="checkbox"]
+{
+	width: 20px;
 }

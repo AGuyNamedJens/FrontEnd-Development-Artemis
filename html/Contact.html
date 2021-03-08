@@ -15,11 +15,11 @@
     <body>
         <nav>
             <div class="logo">
-                <a href="./index.html">
+                <a href="../index.html">
                     <img src="../img/Artemis_logo_transparent.png">
                 </a>
             </div>
-          	<ul>
+            <ul>
                 <li>
                     <a href="../index.html">Home</a>
                 </li>
@@ -33,7 +33,7 @@
                     <a href="Contact.html">Contact</a>
                 </li>
             </ul>
-            <div class="cta doneer" href="#">
+            <div class="doneer">
                 <a  href="Doneer.html">Doneer</a>
             </div>
         </nav>
@@ -44,19 +44,19 @@
                     <h3>
                         Aanhef
                     </h3>
-                    <input type="text"></input>
+                    <input type="text" required></input>
                     <h3>
                         Naam
                     </h3>
-                    <input type="text"></input>
+                    <input type="text" required></input>
                     <h3>
                         E-mail
                     </h3>
-                    <input type="email"></input>
+                    <input type="email" required></input>
                     <h3>
                         TelefoonNummer
                     </h3>
-                    <input type="tel"></input>
+                    <input type="tel" required></input>
                 </div>
                 
                 <div id="wrapper2">
@@ -68,9 +68,17 @@
             <!-- End of form wrapper -->
             
                 <div id="wrapper3">
-                    <input id="send" type="submit" readonly="readonly" value="Verstuur"></input>
+
+                    <div id="checkboxWrapper">
+                        <input type="checkbox" id="nieuwsbrief">
+                            <label for="nieuwsbrief" type="text">  
+                                Aanmelden voor nieuwsbrief    
+                            </label>     
+                        </input>
+                    </div>    
+                                    
+                    <input class="sentForm" id="send" type="submit" readonly="readonly" value="Verstuur"></input>
                 </div>
-				
             </form>
         </main>
     </body>
