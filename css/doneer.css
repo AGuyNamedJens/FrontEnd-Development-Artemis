@@ -4,24 +4,84 @@
 	background-repeat: no-repeat;
 	background-position: center;
 
-	display: flex;
-	flex-direction: column;
-  	justify-content: center;
-	flex-wrap: wrap;
-	align-items: center;
-
-	/* width: max-content; */
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 13rem auto;
 }
 
+form h1{
+	font-size: 5em;
+	margin: 1em;
+	color: var(--paars);
+	font-weight: 500;
+}
 
 form
 {
-	display: flex;
+	grid-column: 1/4;
+	grid-row: 2;
 
+	display: flex;
 	flex-direction: column;
+  	justify-content: center;
+	align-items: center;
+
+	background-color: red;
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+}
+
+#Goal{
+	grid-column: span 5;
+	padding: 3rem;
+
+	display: flex;
+	flex-direction: row;
+	background-color: purple;
+}
+
+#Donations{
+	grid-column: 4/6;
+	grid-row: 2;
+
+	background-color: #FFFFFFAA;
+}
+
+#Donations li{
+	margin: 1rem;
+	padding: 0 2rem;
+	border-radius: 60px;
+
+	display: grid;
+	grid-template-columns: 5rem auto 4rem;
+	gap: 3rem;
+
+	background-color: var(--lichtbruin);
+}
+
+#Donations li>p{
+	display: flex;
+	justify-content: center;
 	align-items: center;
 }
 
-input[type="submit"]{
-	width: 70%;
+#Donations li img{
+	height: 5em;
+	position: relative;
+	top: +0.45rem
+}
+
+#Donations li .donationAmount{
+
+	background-color: var(--geel);
+	min-width: 4em;
+	height: 4em;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+
+	font-size: 1.5rem;
 }
