@@ -39,7 +39,9 @@ function doneerSubmit()
     document.getElementById('Progress').style.width = d + "%";
     
     document.getElementById('MainGoal').style.width = 100-d + "%";
-    document.getElementById('Progress').querySelector("p").innerHTML = `€${DonationAmountTotal},-`
+
+    var previousAmount = document.getElementById('Progress').querySelector("p").innerHTML;
+    document.getElementById('Progress').querySelector("p").innerHTML = previousAmount + 1;
 
     
 
