@@ -1,6 +1,6 @@
 #mainDoneer{
 	height: 80vh;
-	background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url("../img/Pussy.jpg");
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url("../img/Pussy.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 
@@ -23,29 +23,29 @@ form
 
 	display: flex;
 	flex-direction: column;
-  	justify-content: center;
 	align-items: center;
-
-	background-color: red;
-	/* display: flex;
-	flex-direction: column;
-	align-items: center; */
+	/* justify-content: center; */
 }
 
 #Goal{
 	grid-column: span 5;
-	padding: 3rem;
-
 	display: flex;
-	flex-direction: row;
-	background-color: purple;
+	justify-content: center;
+	align-items: center;
+}
+
+#GoalWrapper{
+	padding: 3rem 3rem;
+	display: flex;
+	width: 90%;
+	box-shadow: 3px 3px 10px var(--lichgrijs);
+
+	background-color: #FFF;
 }
 
 #Donations{
 	grid-column: 4/6;
 	grid-row: 2;
-
-	background-color: #FFFFFFAA;
 }
 
 #Donations li{
@@ -60,6 +60,31 @@ form
 	background-color: var(--lichtbruin);
 }
 
+#TimesDonated{
+	margin: 0.5rem;
+	border-radius: 60px;
+	background-color: var(--paars);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#TimesDonated p{
+	padding: 1rem 3rem;
+	font-size: 2.75em;
+}
+
+#TimesDonated div{
+	flex-grow: 1;
+	flex-shrink: 1;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
 #Donations li>p{
 	display: flex;
 	justify-content: center;
@@ -72,7 +97,7 @@ form
 	top: +0.45rem
 }
 
-#Donations li .donationAmount{
+#Donations li .donationAmount, #TimesDonated h2{
 
 	background-color: var(--geel);
 	min-width: 4em;
@@ -84,4 +109,46 @@ form
 	border-radius: 50%;
 
 	font-size: 1.5rem;
+}
+
+#Goal h1{
+	flex-grow: 0.5;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: 500;
+}
+
+#Progressbar{
+	flex-grow: 1;
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#Progressbar .bar{
+	height: 2rem;
+	width: 100%;
+}
+
+#Progressbar p{
+	text-align: center;
+	margin: 0.5rem 0;
+}
+
+#Progress{
+	width: 70%;
+}
+
+#MainGoal{
+	width: 30%;
+}
+
+#Progress .bar{
+	background-color: green;
+}
+
+#MainGoal .bar{
+	background-color: hotpink;
 }
