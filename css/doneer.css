@@ -152,3 +152,22 @@ form
 #MainGoal .bar{
 	background-color: hotpink;
 }
+
+/* End Test Phasing */
+
+.preItemDoneer
+{
+	display: none;
+}
+
+.preMainDoneer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 100vw;
+
+	height: 80vh;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url("../img/Pussy.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
