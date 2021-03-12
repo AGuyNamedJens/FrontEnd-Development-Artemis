@@ -2,6 +2,21 @@ var hasDonated = false;
 
 function doneerSubmit()
 {
+
+    // "Pop-Up" nieuwe elementen na dat je een keer op de knop doneer drukt.
+   if(!hasDonated) {
+    // Add Id en verwijder Class
+    document.getElementsByClassName('preItemDoneer')[1].id = "Donations";
+    document.getElementById('Donations').classList.remove("preItemDoneer")
+    // Add Id en verwijder Class
+    document.getElementsByClassName('preItemDoneer')[0].id = "Goal";
+    document.getElementById('Goal').classList.remove("preItemDoneer")
+    // Add Id en verwijder Class
+    document.getElementsByClassName('preMainDoneer')[0].id = "mainDoneer";
+    document.getElementById('mainDoneer').classList.remove("preMainDoneer")
+   }
+
+
     // Get values van de form
     let form = document.getElementById('formDoneer');
     let naam = form.elements['Naam'].value.length > 0 ? form.elements['Naam'].value : "Anoniem";
