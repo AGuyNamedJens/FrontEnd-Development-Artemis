@@ -7,6 +7,8 @@
         <title>Doneer</title>
         <link rel = "icon" href = "../img/Artemis_icon_Tabheader.png" type = "image/x-icon">
         
+        <script src="../scripts/doneer.js" defer></script>
+
         <link rel="stylesheet" href="../css/General.css">
         <link rel="stylesheet" href="../css/Forms.css">
         <link rel="stylesheet" href="../css/doneer.css">
@@ -44,18 +46,19 @@
                     Doneer Nu
                 </h1>
                 <h3>
-                    Aanhef
+                    Bedrag
                 </h3>
-                <input type="text" required="required"></input>
+                <input type="number" name="Bedrag" required="required"></input>
                 <h3>
                     Naam
                 </h3>
-                <input type="text" required="required"></input>
+                <input type="text" name="Naam" required="required"></input>
                 <h3>
                     E-mail
                 </h3>
-                <input type="text" required="required"></input>
-				<input type="submit" value="Doneer">
+                <input type="text" name="E-mail" required="required"></input>
+
+				<input type="button" onclick="doneerSubmit()" value="Doneer">
             </form>
             <div id="Goal">
                 <div id="GoalWrapper">
@@ -66,13 +69,13 @@
                         <div id="Progress">
                             <div class="bar"></div>
                             <p>
-                                1234
+                                300
                             </p>
                         </div>
                         <div id="MainGoal">
                             <div class="bar"></div>
                             <p>
-                                5678
+                                500
                             </p>
                         </div>
                     </div>
@@ -86,7 +89,7 @@
                     </p>
                     <div class="amount">
                         <h2>
-                            €999
+                            €300
                         </h2>
                     </div>
                 </div>
