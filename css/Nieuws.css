@@ -18,13 +18,17 @@ main #GridContainer{
     gap:3rem;
 
     text-align: center;
+
     color: var(--paars);
 }
 
-
+#NewsItems h2{
+    padding: 1rem;
+}
 
 #NewsItems p{
     display:none;
+
 }
 
 #NewsItems img{
@@ -38,7 +42,7 @@ main #GridContainer{
 .NewsArticle{
     background-color: var(--lichtbruin);
     height:4rem;
-    width:30rem;
+    width:40rem;
     border-top-right-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
 }
