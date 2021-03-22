@@ -1,0 +1,11 @@
+.transforms {
+  text-transform: uppercase;
+}
+body {
+  background-color: #842210;
+}
+h1 {
+  font-family: 'Helvetica';
+  text-transform: uppercase;
+  color: #ff6630;
+}
