@@ -1,0 +1,22 @@
+{
+  "name": "frontend-development-artemis",
+  "version": "0.0.5",
+  "description": "Website frontend-development",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "less": "^4.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGuyNamedJens/FrontEnd-Development-Artemis.git"
+  },
+  "author": "Jens",
+  "contributors": ["Thomas", "Vincent"],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AGuyNamedJens/FrontEnd-Development-Artemis/issues"
+  },
+  "homepage": "https://github.com/AGuyNamedJens/FrontEnd-Development-Artemis"
+}
