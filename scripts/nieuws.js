@@ -49,3 +49,8 @@ function showArticle(){
     $('article h2').text(h2Text);
     $('article p').text(pText);
 }
+
+var h = window.innerHeight;
+var w = window.innerWidth;
+
+$('title').text(''+w+'X'+h);
