@@ -1,53 +1,42 @@
-
-#mainContact{
-	height: 80vh;
-	background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url("../img/Pussy.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-
-	display: flex;
-	flex-direction: row;
-  	justify-content: center;
-	flex-wrap: wrap;
-	align-items: center;
-
-	width: 100%;
+#mainContact {
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%), url("../img/Pussy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
 }
-
-#formContact{
-	width: 500px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: auto auto;
-	gap: 1rem 5rem;
+#formContact {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem 5rem;
 }
-
-#formContact #Question{
-	min-height: 16rem;
-	grid-column: 2;
+#formContact #Question {
+  min-height: 16rem;
+  grid-column: 2;
+  padding: 1rem;
 }
-
-#wrapper3{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	
-	grid-row: 2;
-	grid-column: span 2;
+#wrapper3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2;
+  grid-column: span 2;
 }
-
-#checkboxWrapper
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 1em;
-	flex-wrap: nowrap;
+#checkboxWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: nowrap;
 }
-
-#checkboxWrapper input[type="checkbox"]
-{
-	width: 20px;
+#checkboxWrapper input[type="checkbox"] {
+  width: 20px;
 }

@@ -1,154 +1,137 @@
-#mainDoneer{
-	height: 80vh;
-	background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url("../img/Pussy.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: 13rem auto;
+#mainDoneer {
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../img/Pussy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 13rem auto;
 }
-
-form h1{
-	font-size: 5em;
-	margin: 1em;
-	color: var(--paars);
-	font-weight: 500;
+form {
+  grid-column: 1/4;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
-
-form
-{
-	grid-column: 1/4;
-	grid-row: 2;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	/* justify-content: center; */
+form h1 {
+  font-size: 5em;
+  margin: 1em;
+  color: #5457a6;
+  font-weight: 500;
 }
-
-#Goal{
-	grid-column: span 5;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#Goal {
+  grid-column: span 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#GoalWrapper{
-	padding: 3rem 3rem;
-	display: flex;
-	width: 90%;
-	box-shadow: 3px 3px 10px var(--lichgrijs);
-
-	background-color: #FFF;
+#Goal h1 {
+  flex-grow: 0.5;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
 }
-
-#Donations{
-	grid-column: 4/6;
-	grid-row: 2;
+#GoalWrapper {
+  padding: 3rem 3rem;
+  display: flex;
+  width: 90%;
+  box-shadow: 3px 3px 10px #707070;
+  background-color: #FFF;
 }
-
-#Donations li{
-	margin: 1rem;
-	padding: 0 2rem;
-	border-radius: 60px;
-
-	display: grid;
-	grid-template-columns: 5rem auto 4rem;
-	gap: 3rem;
-
-	background-color: var(--lichtbruin);
+#Donations {
+  grid-column: 4/6;
+  grid-row: 2;
 }
-
-#TimesDonated{
-	margin: 0.5rem;
-	border-radius: 60px;
-	background-color: var(--paars);
-
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+#Donations li {
+  margin: 1rem;
+  padding: 0 2rem;
+  border-radius: 60px;
+  display: grid;
+  grid-template-columns: 5rem auto 4rem;
+  gap: 3rem;
+  background-color: #f1e6d1;
 }
-
-#TimesDonated p{
-	padding: 1rem 3rem;
-	font-size: 2.75em;
+#Donations li > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#TimesDonated div{
-	flex-grow: 1;
-	flex-shrink: 1;
-
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+#Donations li img {
+  height: 5em;
+  position: relative;
+  top: 0.45rem;
 }
-
-#Donations li>p{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#TimesDonated {
+  margin: 0.5rem;
+  border-radius: 60px;
+  background-color: #5457a6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-
-#Donations li img{
-	height: 5em;
-	position: relative;
-	top: +0.45rem
+#TimesDonated p {
+  padding: 1rem 3rem;
+  font-size: 2.75em;
 }
-
-#Donations li .donationAmount, #TimesDonated h2{
-
-	background-color: var(--geel);
-	min-width: 4em;
-	height: 4em;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-
-	font-size: 1.5rem;
+#TimesDonated div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-#Goal h1{
-	flex-grow: 0.5;
-	font-size: 4rem;
-	text-align: center;
-	font-weight: 500;
+#Donations li .donationAmount,
+#TimesDonated h2 {
+  background-color: #eebb55;
+  min-width: 4em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
 }
-
-#Progressbar{
-	flex-grow: 1;
-
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
+#Progressbar {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
-#Progressbar .bar{
-	height: 2rem;
-	width: 100%;
+#Progressbar .bar {
+  height: 2rem;
+  width: 100%;
 }
-
-#Progressbar p{
-	text-align: center;
-	margin: 0.5rem 0;
+#Progressbar p {
+  text-align: center;
+  margin: 0.5rem 0;
 }
-
-#Progress{
-	width: 63%;
+#Progressbar #Progress {
+  width: 63%;
 }
-
-#MainGoal{
-	width: 37%;
+#Progressbar #Progress .bar {
+  background-color: green;
 }
-
-#Progress .bar{
-	background-color: green;
+#Progressbar #MainGoal {
+  width: 37%;
 }
-
-#MainGoal .bar{
-	background-color: hotpink;
+#Progressbar #MainGoal .bar {
+  background-color: hotpink;
+}
+/* End Test Phasing */
+.preItemDoneer {
+  display: none;
+}
+.preMainDoneer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  height: 80vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), url("../img/Pussy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }

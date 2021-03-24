@@ -1,4 +1,4 @@
-var index = 0;
+let index = 0;
 
 function slideshow() {
   const dataArray = new Array(
@@ -13,11 +13,6 @@ function slideshow() {
 
   if (index < 4) index++;
   else index = 0;
-}
-
-// Donate SlideIn
-function donateButton() {
-  document.getElementsByClassName("doneer")[0].className = "doneer fadeIn";
 }
 
 // Vars voor clearInterval
@@ -51,9 +46,39 @@ function SlideShow() {
   }
 }
 
-// Opacity op 0 vanwege animatie
-document.getElementsByClassName("doneer")[0].style.opacity = 0;
-
 // Timeouts voor fade effecten
-window.onload = setTimeout(donateButton, 1500);
+window.onload = setTimeout(BTNDonateAnimation, 1500);
 window.onload = setTimeout(SlideShow, 5000);
+
+window.onresize = (() => { BTNDonateAnimation() });
+
+let isLoaded = false;
+
+function BTNDonateAnimation()
+{ 
+  if(window.innerWidth >= 1100)
+  {
+    if(!isLoaded) document.getElementsByClassName("desktop")[0].classList.add("fadeIn");
+    else {
+      document.getElementsByClassName("desktop")[0].classList.remove("fadeIn");
+      document.getElementsByClassName("desktop")[0].style.opacity = '100%';
+    }
+
+    document.getElementsByClassName("desktop")[0].style.display = "flex";
+    document.getElementsByClassName("mobileDevice")[0].style.display = "none";
+  }
+
+  else if(window.innerWidth <= 1100)
+  {
+    if(!isLoaded) document.getElementsByClassName("mobileDevice")[0].classList.add("fadeIn");
+    else {
+      document.getElementsByClassName("mobileDevice")[0].classList.remove("fadeIn");
+      document.getElementsByClassName("mobileDevice")[0].style.opacity = '100%';
+    }
+
+    document.getElementsByClassName("mobileDevice")[0].style.display = "flex";
+    document.getElementsByClassName("desktop")[0].style.display = "none";
+  }
+
+  isLoaded = true;
+}
