@@ -1,5 +1,67 @@
+<<<<<<< HEAD
 main #GridContainer{
 
+=======
+main #GridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+#NewsItems {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 3rem 0;
+  margin: 1rem 0px;
+  gap: 3rem;
+  text-align: center;
+  color: #5457a6;
+}
+#NewsItems h2 {
+  padding: 1rem;
+}
+#NewsItems p {
+  display: none;
+}
+#NewsItems img {
+  /* display:none; */
+  height: 4rem;
+  width: 6rem;
+  float: right;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+.NewsArticle {
+  background-color: #f1e6d1;
+  height: 4rem;
+  width: 40rem;
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+}
+article {
+  visibility: hidden;
+  grid-column: 2;
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50rem;
+}
+article h2 {
+  background-color: #5457a6;
+  color: #fff;
+  text-align: center;
+}
+article p {
+  background-color: #f1e6d1;
+  height: 20rem;
+  padding: 1rem 3rem;
+  box-shadow: black 1px 1px;
+}
+@media (max-width: 1280px) {
+  main #GridContainer {
+>>>>>>> parent of b9beee4 (Menu responsive maken. Nieuws responsive maken.)
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
@@ -41,6 +103,7 @@ main #GridContainer{
     width:30rem;
     border-top-right-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
+<<<<<<< HEAD
 }
 
 article{
@@ -48,6 +111,14 @@ article{
     grid-column: 2;
     margin:5rem;
     display:flex;
+=======
+  }
+  article {
+    visibility: hidden;
+    grid-column: 2;
+    margin: 5rem;
+    display: flex;
+>>>>>>> parent of b9beee4 (Menu responsive maken. Nieuws responsive maken.)
     flex-direction: column;
     justify-content: center;
 
