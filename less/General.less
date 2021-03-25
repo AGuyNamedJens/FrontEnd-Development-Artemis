@@ -100,6 +100,33 @@ nav
     #HamburgerMenu
     {
         display: none;
+
+        justify-self: flex-end;
+
+        width: 40px;
+
+        .barItem,
+        &::before,
+        &::after
+        {
+            content: '';
+            display: block;
+
+            width: 100%;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #000;
+
+        }
+    }
+
+    h1
+    {
+        display: none;
+
+        text-align: center;
+        color: @paars;
+        font-size: 3em;
     }
 }
 
@@ -131,7 +158,12 @@ nav
 
         // padding: 2.5rem 0;
 
-        grid-template-columns: calc(@logo_width * 2) 1fr;
+        grid-template-columns: calc(@logo_width * 2) 1fr calc(@logo_width * 2);
+        
+        h1
+        {
+            display: block;
+        }
 
         ul
         {
@@ -151,42 +183,17 @@ nav
             margin: 0px;
         }
 
-        //Hier was ik gebleven voor menu
         #HamburgerMenu
         {
-            justify-self: flex-end;
+            display: block;
+        }
 
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background-color: blue;
-            height: 50px;
-            width: 100px;
-
-            .barItem,
-            .barItem::before,
-            .barItem::after
-            {
-                height: 3px;
-                width: 80px;
-                background-color: #000;
-
-                &::before
-                {
-                    content: '';
-                    position: absolute;
-                    top: 0px;
-                }
-
-                &::after
-                {
-                    content: '';
-                    position: absolute;
-                    bottom: 0px;
-                }
-            }
+        //Hier was ik gebleven voor menu
+        
+        #HamburgerMenu:focus,
+        #HamburgerMenu:hover
+        {
+            background-color: red;
         }
     }
 }
