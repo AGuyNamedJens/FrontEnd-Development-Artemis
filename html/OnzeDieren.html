@@ -5,19 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Onze Dieren</title>
-        <link rel = "icon" href = "../img/Artemis_icon_Tabheader.png" type = "image/x-icon">
+        <link rel = "icon" href = "../Img/Artemis_icon_Tabheader.png" type = "image/x-icon">
         
-        <link rel="stylesheet" href="../css/General.css"> 
         <link rel="stylesheet" href="../css/onzeDieren.css"> 
+        <link rel="stylesheet" href="../css/General.css"> 
+
+        <script src="../scripts/general.js" defer></script>
     </head>
     <body>
         <nav>
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../img/Artemis_logo_transparent.png">
-                </a>
-            </div>
-            <ul>
+            
+            <a href="../index.html">
+                <Img src="../Img/Artemis_icon_Tabheader.png">
+            </a>
+
+            <h1 id="PageTitle">
+                Home
+            </h1>
+
+            <ul id="NavMenu">
                 <li>
                     <a href="../index.html">Home</a>
                 </li>
@@ -30,15 +36,27 @@
                 <li>
                     <a href="Contact.html">Contact</a>
                 </li>
+                <li>
+                    <a class="doneer mobileDevice" href="Doneer.html">
+                        Doneer
+                    </a>
+                </li>
             </ul>
-            <div class="doneer">
-                <a  href="Doneer.html">Doneer</a>
+
+            <a class="doneer desktop" href="html/Doneer.html">
+                Doneer
+            </a>
+
+            <div id="HamburgerMenu">
+                <div class="barItem"></div>
             </div>
+
         </nav>
+        <div id="ClearFix"></div>
         <div id="container">
 
             <div class="dier">
-                <img src="../Img/OnzeDieren/grumpie.jpg" alt="Grumpie">
+                <Img src="../Img/OnzeDieren/grumpie.jpg" alt="Grumpie">
 
                 <div class="soort">
                     <span>Soort:</span> Hond
@@ -63,7 +81,7 @@
             </div>
 
             <div class="dier">
-                <img src="../Img/OnzeDieren/Le_Bunny.jpg" alt="Grumpie">
+                <Img src="../Img/OnzeDieren/Le_Bunny.jpg" alt="Grumpie">
 
                 <div class="soort">
                     <span>Soort:</span> Konijn
@@ -88,7 +106,7 @@
             </div>
 
             <div class="dier">
-                <img src="../Img/OnzeDieren/Veldmuis.jpg" alt="Grumpie">
+                <Img src="../Img/OnzeDieren/Veldmuis.jpg" alt="Grumpie">
 
                 <div class="soort">
                     <span>Soort:</span> Veldmuis
@@ -112,7 +130,7 @@
             </div>
 
             <div class="dier">
-                <img src="../Img/OnzeDieren/Siamees.jpg" alt="Grumpie">
+                <Img src="../Img/OnzeDieren/Siamees.jpg" alt="Grumpie">
 
                 <div class="soort">
                     <span>Soort:</span> Kat

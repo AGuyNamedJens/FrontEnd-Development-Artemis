@@ -93,7 +93,7 @@ nav #PageTitle {
 }
 @media (max-width: 1100px) {
   nav {
-    grid-template-columns: calc(4rem * 2) 1fr calc(4rem * 2);
+    grid-template-columns: 4rem 1fr 4rem;
   }
   nav #PageTitle {
     display: block;
@@ -113,9 +113,14 @@ nav #PageTitle {
   nav #HamburgerMenu {
     display: block;
   }
-  nav #HamburgerMenu:focus,
-  nav #HamburgerMenu:hover {
-    background-color: red;
+  nav #HamburgerMenu {
+    cursor: pointer;
+  }
+}
+@media (max-width: 390px) {
+  nav .doneer {
+    padding: 0.5rem 1rem;
+    min-width: 150px;
   }
 }
 @-webkit-keyframes fadeIn {

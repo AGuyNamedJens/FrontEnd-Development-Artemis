@@ -1,12 +1,19 @@
+/*
+    General.js - Hoofd Javascript file
+*/
+
+// Wanneer pagina geladen is, zet timeout voor de donate animation en bekijk welke soort menu je nodig hebt
 window.onload = setTimeout(BTNDonateAnimation, 1500);
 
+// Voor resize van je browser (mobiel/browser testen) bekijk welke soort menu je nodig hebt
 window.onresize = (() => { BTNDonateAnimation() });
+
 
 let isLoaded = false;
 
 function BTNDonateAnimation()
 { 
-  if(window.innerWidth >= 1100)
+  if(window.innerWidth > 1100)
   {
     if(!isLoaded) document.getElementsByClassName("desktop")[0].classList.add("fadeIn");
     else {
@@ -33,9 +40,22 @@ function BTNDonateAnimation()
   isLoaded = true;
 }
 
-//PageTitle
 
 
-document.getElementById("NavMenu").onclick = (() => {
+
+// Onclick Hamburgermenu, open/close het menu
+
+let isOpen = false;
+
+document.getElementById("HamburgerMenu").onclick = (() => {
+  (isOpen) ? isOpen = false : isOpen = true;
+
+  if(isOpen) 
+  {
+    document.getElementById("NavMenu").style.display = "flex";
     document.getElementById("PageTitle").style.display = "none";
+  } else {
+    document.getElementById("NavMenu").style.display = "none";
+    document.getElementById("PageTitle").style.display = "block";
+  }
 });

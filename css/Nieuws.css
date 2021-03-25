@@ -40,9 +40,6 @@ article {
   visibility: hidden;
   grid-column: 2;
   margin: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   display: grid;
   grid-template-columns: auto;
   max-width: 50rem;
@@ -134,12 +131,11 @@ article #showArticle p {
 @media (max-width: 1000px) {
   main #GridContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr, 2px);
     width: 100%;
     margin: 5vh 0;
   }
   #NewsItems {
-    grid-column: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -172,8 +168,6 @@ article #showArticle p {
     overflow: hidden;
   }
   article {
-    visibility: hidden;
-    grid-column: 2;
     margin: 5rem;
     display: flex;
     flex-direction: column;
@@ -191,6 +185,7 @@ article #showArticle p {
     padding: 0px 2px;
     color: #ffffff;
     justify-content: center;
+    height: auto;
   }
   article #showArticle {
     visibility: hidden;

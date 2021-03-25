@@ -2,11 +2,11 @@ let index = 0;
 
 function slideshow() {
   const dataArray = new Array(
-    "img/index/Slideshow/Pup.jpg",
-    "img/index/Slideshow/pup2.jpg",
-    "img/index/Slideshow/pup3.jpg",
-    "img/index/Slideshow/Cats_Kittens_Glance_549762_2560x1440.jpg",
-    "img/index/Slideshow/Pussy.jpg"
+    "Img/index/Slideshow/Pup.jpg",
+    "Img/index/Slideshow/pup2.jpg",
+    "Img/index/Slideshow/pup3.jpg",
+    "Img/index/Slideshow/Cats_Kittens_Glance_549762_2560x1440.jpg",
+    "Img/index/Slideshow/Pussy.jpg"
   );
   document.getElementById("slideShowImg").src = `${dataArray[`${index}`]}`;
   document.getElementById("slideShowImg").className = "fadeIn";
