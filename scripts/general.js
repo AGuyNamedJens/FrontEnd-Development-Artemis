@@ -8,8 +8,10 @@ window.onload = setTimeout(BTNDonateAnimation, 1500);
 // Voor resize van je browser (mobiel/browser testen) bekijk welke soort menu je nodig hebt
 window.onresize = (() => { BTNDonateAnimation() });
 
-
+// Variabelen
 let isLoaded = false;
+let isOpen = false;
+
 
 function BTNDonateAnimation()
 { 
@@ -23,6 +25,11 @@ function BTNDonateAnimation()
 
     document.getElementsByClassName("desktop")[0].style.display = "flex";
     document.getElementsByClassName("mobileDevice")[0].style.display = "none";
+    
+    // Hard coded force nav "open"
+    isOpen = true;
+    document.getElementById("NavMenu").style.display = "flex";
+    document.getElementById("PageTitle").style.display = "none";
   }
 
   else if(window.innerWidth <= 1100)
@@ -35,6 +42,11 @@ function BTNDonateAnimation()
 
     document.getElementsByClassName("mobileDevice")[0].style.display = "flex";
     document.getElementsByClassName("desktop")[0].style.display = "none";
+
+    // Hard coded force nav closed
+    isOpen = false;
+    document.getElementById("NavMenu").style.display = "none";
+    document.getElementById("PageTitle").style.display = "block";
   }
 
   isLoaded = true;
@@ -45,12 +57,10 @@ function BTNDonateAnimation()
 
 // Onclick Hamburgermenu, open/close het menu
 
-let isOpen = false;
-
 document.getElementById("HamburgerMenu").onclick = (() => {
   (isOpen) ? isOpen = false : isOpen = true;
 
-  if(isOpen) 
+  if(isOpen)
   {
     document.getElementById("NavMenu").style.display = "flex";
     document.getElementById("PageTitle").style.display = "none";
