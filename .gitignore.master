@@ -1,9 +1,13 @@
 node_modules
 package-lock.json
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 less/
 >>>>>>> in-dev
+=======
+less/
+>>>>>>> 1a50fb9d258dfb761b15919bdcbabe108aa97e2a
 
 ### VisualStudioCode ###
 .vscode/*
