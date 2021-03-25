@@ -47,46 +47,4 @@ function SlideShow() {
 }
 
 // Timeouts voor fade effecten
-window.onload = setTimeout(BTNDonateAnimation, 1500);
 window.onload = setTimeout(SlideShow, 5000);
-
-window.onresize = (() => { BTNDonateAnimation() });
-
-let isLoaded = false;
-
-function BTNDonateAnimation()
-{ 
-  if(window.innerWidth >= 1100)
-  {
-    if(!isLoaded) document.getElementsByClassName("desktop")[0].classList.add("fadeIn");
-    else {
-      document.getElementsByClassName("desktop")[0].classList.remove("fadeIn");
-      document.getElementsByClassName("desktop")[0].style.opacity = '100%';
-    }
-
-    document.getElementsByClassName("desktop")[0].style.display = "flex";
-    document.getElementsByClassName("mobileDevice")[0].style.display = "none";
-  }
-
-  else if(window.innerWidth <= 1100)
-  {
-    if(!isLoaded) document.getElementsByClassName("mobileDevice")[0].classList.add("fadeIn");
-    else {
-      document.getElementsByClassName("mobileDevice")[0].classList.remove("fadeIn");
-      document.getElementsByClassName("mobileDevice")[0].style.opacity = '100%';
-    }
-
-    document.getElementsByClassName("mobileDevice")[0].style.display = "flex";
-    document.getElementsByClassName("desktop")[0].style.display = "none";
-  }
-
-  isLoaded = true;
-}
-
-document.getElementById("#HamburgerMenu").addEventListener("mouseenter", (()=>{
-  document.querySelector("nav > ul").style.display = "none";
-}));
-
-document.getElementById("#HamburgerMenu").addEventListener("mouseleave", (()=>{
-  document.querySelector("nav > ul").style.display = "flex";
-}));

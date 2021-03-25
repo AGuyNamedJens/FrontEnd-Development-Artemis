@@ -29,7 +29,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-nav ul {
+nav #NavMenu {
   height: 100%;
   list-style-type: none;
   display: flex;
@@ -38,11 +38,11 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
 }
-nav ul a {
+nav #NavMenu a {
   color: #000;
   font-size: 1.5em;
 }
-nav ul .mobileDevice {
+nav #NavMenu .mobileDevice {
   display: none;
 }
 nav a[href="./index.html"] {
@@ -82,7 +82,7 @@ nav #HamburgerMenu::after {
   margin: 5px 0;
   background-color: #000;
 }
-nav h1 {
+nav #PageTitle {
   display: none;
   text-align: center;
   color: #5457a6;
@@ -95,15 +95,15 @@ nav h1 {
   nav {
     grid-template-columns: calc(4rem * 2) 1fr calc(4rem * 2);
   }
-  nav h1 {
+  nav #PageTitle {
     display: block;
   }
-  nav ul {
+  nav #NavMenu {
     display: none;
     flex-direction: column;
     gap: 2rem;
   }
-  nav ul .desktop {
+  nav #NavMenu .desktop {
     display: none;
   }
   nav li {
