@@ -83,10 +83,6 @@ function BTNDonateAnimation()
   isLoaded = true;
 }
 
-document.getElementById("#HamburgerMenu").addEventListener("mouseenter", (()=>{
-  document.querySelector("nav > ul").style.display = "none";
-}));
-
-document.getElementById("#HamburgerMenu").addEventListener("mouseleave", (()=>{
+document.getElementById("HamburgerMenu").addEventListener("onclick", (()=>{
   document.querySelector("nav > ul").style.display = "flex";
 }));
