@@ -84,8 +84,9 @@ function BTNDonateAnimation()
 }
 
 document.getElementById("#HamburgerMenu").addEventListener("mouseenter", (()=>{
-  
+  document.querySelector("nav > ul").style.display = "none";
 }));
+
 document.getElementById("#HamburgerMenu").addEventListener("mouseleave", (()=>{
   document.querySelector("nav > ul").style.display = "flex";
 }));
