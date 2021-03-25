@@ -82,7 +82,3 @@ function BTNDonateAnimation()
 
   isLoaded = true;
 }
-
-document.getElementById("HamburgerMenu").addEventListener("onclick", (()=>{
-  document.querySelector("nav > ul").style.display = "flex";
-}));
