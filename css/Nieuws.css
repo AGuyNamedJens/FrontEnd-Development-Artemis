@@ -1,4 +1,5 @@
 main #GridContainer {
+  margin: 5vh 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
@@ -39,14 +40,12 @@ article {
   visibility: hidden;
   grid-column: 2;
   margin: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   display: grid;
   grid-template-columns: auto;
   max-width: 50rem;
 }
 article #showArticleButton {
+  visibility: hidden;
   grid-column: 1;
   background-color: #5457a6;
   margin: 0px 2px;
@@ -59,7 +58,7 @@ article #showArticle {
   max-width: 50vw;
 }
 article #showArticle img {
-  width: auto;
+  width: inherit;
 }
 article #showArticle h2 {
   background-color: #5457a6;
@@ -74,6 +73,7 @@ article #showArticle p {
 }
 @media (max-width: 1280px) {
   #NewsItems {
+    margin: 5vh 0;
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -128,14 +128,14 @@ article #showArticle p {
     box-shadow: black 1px 1px;
   }
 }
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   main #GridContainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr, 2px);
     width: 100%;
+    margin: 5vh 0;
   }
   #NewsItems {
-    grid-column: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -168,21 +168,39 @@ article #showArticle p {
     overflow: hidden;
   }
   article {
-    visibility: hidden;
-    grid-column: 2;
-    margin: 1rem;
+    margin: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
     max-width: 50rem;
     min-width: 30rem;
   }
-  article h2 {
+  article #showArticleButton {
+    visibility: visible;
+    grid-column: 2;
+    background-color: #5457a6;
+    margin: 0px 2px;
+    padding: 0px 2px;
+    color: #ffffff;
+    justify-content: center;
+    height: auto;
+  }
+  article #showArticle {
+    visibility: hidden;
+    grid-column: 1;
+    max-width: 50vw;
+  }
+  article #showArticle img {
+    width: inherit;
+  }
+  article #showArticle h2 {
     background-color: #5457a6;
     color: #fff;
     text-align: center;
   }
-  article p {
+  article #showArticle p {
     background-color: #f1e6d1;
     height: 20rem;
     padding: 1rem 3rem;
