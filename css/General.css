@@ -29,7 +29,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-nav #NavMenu {
+nav ul {
   height: 100%;
   list-style-type: none;
   display: flex;
@@ -38,11 +38,11 @@ nav #NavMenu {
   justify-content: space-evenly;
   align-items: center;
 }
-nav #NavMenu a {
+nav ul a {
   color: #000;
   font-size: 1.5em;
 }
-nav #NavMenu .mobileDevice {
+nav ul .mobileDevice {
   display: none;
 }
 nav a[href="./index.html"] {
@@ -82,7 +82,7 @@ nav #HamburgerMenu::after {
   margin: 5px 0;
   background-color: #000;
 }
-nav #PageTitle {
+nav h1 {
   display: none;
   text-align: center;
   color: #5457a6;
@@ -93,17 +93,17 @@ nav #PageTitle {
 }
 @media (max-width: 1100px) {
   nav {
-    grid-template-columns: 4rem 1fr 4rem;
+    grid-template-columns: calc(4rem * 2) 1fr calc(4rem * 2);
   }
-  nav #PageTitle {
+  nav h1 {
     display: block;
   }
-  nav #NavMenu {
+  nav ul {
     display: none;
     flex-direction: column;
     gap: 2rem;
   }
-  nav #NavMenu .desktop {
+  nav ul .desktop {
     display: none;
   }
   nav li {
@@ -113,14 +113,9 @@ nav #PageTitle {
   nav #HamburgerMenu {
     display: block;
   }
-  nav #HamburgerMenu {
-    cursor: pointer;
-  }
-}
-@media (max-width: 390px) {
-  nav .doneer {
-    padding: 0.5rem 1rem;
-    min-width: 150px;
+  nav #HamburgerMenu:focus,
+  nav #HamburgerMenu:hover {
+    background-color: red;
   }
 }
 @-webkit-keyframes fadeIn {

@@ -1,16 +1,3 @@
-/*
-    ** Get element by id of class
-    document.getElementById("GIB ID")
-    document.getElementsByClass("GIB CLASS")[0]
-
-    ** onclick functie
-    <element>.onclick = (() => {
-        // Code hier
-    }
-
-    ** get element text
-    <element>.text
-*/
 
 var pText;
 var h2Text;
