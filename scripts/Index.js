@@ -46,7 +46,7 @@ function SlideShow() {
   }
 }
 
-let aboutUsTextArray = [
+/*let aboutUsTextArray = [
 `Artemis dierenopvang is een opvang waar in principe ieder dier in nood welkom is. Onze organisatie richt zich voornamelijk op huisdieren en wij zijn in regio Den Bosch de opvang met de meeste huisdieren. Wij werken vanuit de gedachte dat ieder dier die hulp nodig heeft geholpen moet worden ongeacht waar het dier geboren is, een ziekte of handicap heeft of dat de eigenaar wel of geen geld heeft voor de afstandskosten. Deze werkwijze is afwijkend van de meeste opvangen.`,
 `Het doel van onze stichting is het opvangen van deze 'overbodige' dieren, deze verzorging en eventueel training te geven en vervolgens op zoek te gaan naar een liefdevolle nieuwe baas.`,
 `Wij vangen zowel Nederlandse dieren op als dieren die in het buitenland geboren zijn. Deze laatste groep wordt veelal onbegrepen en dreigt vaak tussen wal en schip te belanden. Helaas worden dieren nog vaak van een foto uitgezocht en vervolgens naar Nederland gestuurd. Met deze plaatsingen gaat het regelmatig mis en er is dan geen opvang voor deze dieren. Om te voorkomen dat ze op verkoopssites belanden en vervolgens van hand tot hand gaan om nog meer trauma´s op te lopen richten wij ons op de opvang voor deze dieren. Bij ons komen ze tot rust, worden ze eventueel getraind en gaan we vanuit daar op zoek naar een definitief thuis.`,
@@ -103,7 +103,7 @@ function createSmallerText() {
   })
 }
 
-window.onload = aboutUsText();
+window.onload = aboutUsText();*/
 
 // Timeouts voor fade effecten
 if(window.innerWidth <= 1024) window.onload = setTimeout(SlideShow, 5000);

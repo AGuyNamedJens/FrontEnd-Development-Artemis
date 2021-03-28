@@ -52,9 +52,6 @@ function BTNDonateAnimation()
   isLoaded = true;
 }
 
-
-
-
 // Onclick Hamburgermenu, open/close het menu
 
 document.getElementById("HamburgerMenu").onclick = (() => {
