@@ -1,69 +1,58 @@
-/*
-    ** Get element by id of class
-    document.getElementById("GIB ID")
-    document.getElementsByClass("GIB CLASS")[0]
+let arrNewsItems = document.getElementsByClassName("NewsArticle");
 
-    ** onclick functie
-    <element>.onclick = (() => {
-        // Code hier
-    }
+for(let i = 0; i < arrNewsItems.length; i++)
+{
+    arrNewsItems[i].addEventListener("click", (() => 
+    {
+        let element = arrNewsItems[i];
+				if(window.innerWidth <= 640){
+        	document.getElementById("NewsItems").style.display = "none";
+					
+        	document.querySelector("article").style.display = "grid";
+        	document.querySelector("article").style.gridColumn = "span 1";
 
-    ** get element text
-    <element>.text
-*/
+        	document.getElementById("GridContainer").style.gridTemplateColumns = "1fr";
+				}
+        //Dit werkt nog niet
 
-var pText;
-var h2Text;
-var imgSrc;
+        document.getElementById("showArticleButton").classList.remove("showArticleButtonAnimateRev");
+        void document.getElementById("showArticleButton").offsetWidth;
+        document.getElementById("showArticleButton").classList.add("showArticleButtonAnimate");
 
-$('#article1').click(function(){
-    pText = $('#article1 p').text();
-    h2Text = $('#article1 h2').text();
-    imgSrc = $('#article1 img').attr('src');
-    // alert(imgSrc);
-    showArticle();
-})
+        ShowArticle(
+            element.querySelector("img").src,
+            element.querySelector("h2").innerHTML,
+            element.querySelector("p").innerHTML);
 
-$('#article2').click(function(){
-    pText = $('#article2 p').text();
-    h2Text = $('#article2 h2').text();
-    imgSrc = $('#article2 img').attr('src');
-    // alert(imgSrc);
-    showArticle();
-})
-
-$('#article3').click(function(){
-    pText = $('#article3 p').text();
-    h2Text = $('#article3 h2').text();
-    imgSrc = $('#article3 img').attr('src');
-    // alert(imgSrc);
-    showArticle();
-})
-
-$('#article4').click(function(){
-    pText = $('#article4 p').text();
-    h2Text = $('#article4 h2').text();
-    imgSrc = $('#article4 img').attr('src');
-    // alert(imgSrc);
-    showArticle();
-})
-
-$('#article5').click(function(){
-    pText = $('#article5 p').text();
-    h2Text = $('#article5 h2').text();
-    imgSrc = $('#article5 img').attr('src');
-    // alert(imgSrc);
-    showArticle();
-})
-
-function showArticle(){
-    $('article').css("visibility","visible");
-    $('article img').attr("src", imgSrc);
-    $('article h2').text(h2Text);
-    $('article p').text(pText);
+    }));
 }
 
-var h = window.innerHeight;
-var w = window.innerWidth;
+function ShowArticle(src, title, text)
+{
+    let article = document.querySelector("article");
 
-$('title').text(''+w+'X'+h);
+	article.style.visibility = "visible";
+    article.querySelector("img").src = src;
+    article.querySelector("h2").innerHTML = title;
+    article.querySelector("p").innerHTML = text;
+}
+
+document.querySelector("#showArticleButton").addEventListener("click", (()=>{
+
+    document.getElementById("NewsItems").style.display = "flex";
+
+
+    if(window.innerWidth <= 640){
+      document.getElementById("GridContainer").style.gridTemplateColumns = "minmax(20rem, 1fr) 1fr";
+			document.querySelector("article").style.visibility = "hidden";
+    }
+    else{
+      //computer
+			document.getElementById("GridContainer").style.gridTemplateColumns = "minmax(30rem, 1fr) 1fr";
+    }
+
+    document.getElementById("showArticleButton").classList.remove("showArticleButtonAnimate");
+    void document.getElementById("showArticleButton").offsetWidth;
+    document.getElementById("showArticleButton").classList.add("showArticleButtonAnimateRev");
+    
+}));

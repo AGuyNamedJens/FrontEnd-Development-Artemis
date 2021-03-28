@@ -5,15 +5,19 @@ function doneerSubmit()
 
     // "Pop-Up" nieuwe elementen na dat je een keer op de knop doneer drukt.
    if(!hasDonated) {
-    // Add Id en verwijder Class
-    document.getElementsByClassName('preItemDoneer')[1].id = "Donations";
-    document.getElementById('Donations').classList.remove("preItemDoneer")
-    // Add Id en verwijder Class
-    document.getElementsByClassName('preItemDoneer')[0].id = "Goal";
-    document.getElementById('Goal').classList.remove("preItemDoneer")
-    // Add Id en verwijder Class
-    document.getElementsByClassName('preMainDoneer')[0].id = "mainDoneer";
-    document.getElementById('mainDoneer').classList.remove("preMainDoneer")
+        // Add Id en verwijder Class
+        document.getElementsByClassName('preItemDoneer')[1].id = "Donations";
+        document.getElementById('Donations').classList.remove("preItemDoneer")
+        // Add Id en verwijder Class
+        document.getElementsByClassName('preItemDoneer')[0].id = "Goal";
+        document.getElementById('Goal').classList.remove("preItemDoneer")
+        // Add Id en verwijder Class
+        document.getElementsByClassName('preMainDoneer')[0].id = "mainDoneer";
+        document.getElementById('mainDoneer').classList.remove("preMainDoneer")
+
+        //Setting other HTML elemtns like forms
+        document.querySelector("#formDoneer>h1").style.display = "none";
+        document.querySelector("form").style.justifyContent = "center"
    }
 
 
@@ -44,10 +48,11 @@ function doneerSubmit()
     }
 
     // Update de goal balk
-    a = DonationAmountTotal;
-    b = 500 // Dit is het nummer voor de goal
-    c = a/b;
-    d = c*100;
+    let a = DonationAmountTotal;
+    let b = 500 // Dit is het nummer voor de goal
+    let c = a/b;
+    let d = c*100;
+    
     if(d > 100) d = 100; // Niet over 100% gaan 
 
     // Verander de Width van de 2 bar elementen.
@@ -59,4 +64,23 @@ function doneerSubmit()
     var previousAmount = Number(document.getElementsByClassName('amount')[0].querySelector("h2").innerHTML);
     document.getElementsByClassName('amount')[0].querySelector("h2").innerHTML = previousAmount+1;
 
+    //Reset form for Go Back
+    document.querySelector("#GoBack").onclick = (() => {
+
+        // Add Id en verwijder Class
+        document.getElementById('Goal').classList.add("preItemDoneer")
+        document.getElementsByClassName('preItemDoneer')[0].id = "-";
+        // Add Id en verwijder Class
+        document.getElementById('Donations').classList.add("preItemDoneer")
+        document.getElementsByClassName('preItemDoneer')[1].id = "-";
+        // Add Id en verwijder Class
+        document.getElementById('mainDoneer').classList.add("preMainDoneer")
+        document.getElementsByClassName('preMainDoneer')[0].id = "-";
+
+        //Setting other HTML elemtns like forms
+        document.querySelector("#formDoneer>h1").style.display = "block";
+        document.querySelector("form").style.justifyContent = "center";
+
+        hasDonated = false;
+    });
 }

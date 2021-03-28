@@ -6,6 +6,25 @@
   overflow-x: hidden;
   text-decoration: none;
 }
+#PleuresEisenDieNiemandWiltLaatMijLekkerNesten .extendMe {
+  opacity: 0;
+}
+#PleuresEisenDieNiemandWiltLaatMijLekkerNesten .HierHebJeJeMixin {
+  font-family: "Helvetica";
+  padding: 0.5rem 3rem;
+  border-radius: 30px;
+  background-color: #eebb55;
+  font-size: 1.5em;
+  min-width: calc(490px/2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 html {
   height: 100%;
   width: 100%;
@@ -30,7 +49,6 @@ nav {
   align-items: center;
 }
 nav #NavMenu {
-  height: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
@@ -52,16 +70,16 @@ nav img {
   width: 4rem;
 }
 nav .doneer {
+  font-family: "Helvetica";
   padding: 0.5rem 3rem;
   border-radius: 30px;
   background-color: #eebb55;
   font-size: 1.5em;
-  min-width: 245px;
+  min-width: calc(490px/2);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFF;
-  opacity: 0;
   -webkit-animation-duration: 5s;
   animation-duration: 5s;
   -webkit-animation-fill-mode: both;
@@ -121,6 +139,9 @@ nav #PageTitle {
   nav .doneer {
     padding: 0.5rem 1rem;
     min-width: 150px;
+  }
+  nav #PageTitle {
+    font-size: 2.75em;
   }
 }
 @-webkit-keyframes fadeIn {
